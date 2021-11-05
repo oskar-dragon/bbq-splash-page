@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>BBQ Splash Page</title>
-		<link rel="stylesheet" href="style.css" />
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet" />
-	</head>
-	<body>
-		<div class="hero">
-			<h1>Learn how to make <strong>the best BBQ ribs</strong> in town</h1>
-			<p class="join-us">Join us for this live webinar</p>
-			<p class="slogan">Mouthwateringly delicious</p>
-		</div>
-		<div class="cto">
-			<h2>Become a BBQ master!</h2>
-			<p>Register Today</p>
-			<p>
-				BBQ isn't just standing in front of your grill with on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best.
-				You can do just that by signing up for this free webinar!
-			</p>
-			<form id="email-form" class="email-form" action="#" method="POST">
-				<input name="name" aria-label="Name" type="text" id="name" placeholder="first name" required />
-				<input name="email" aria-label="email" type="text" id="email" placeholder="email" required />
-				<button class="btn btn-primary" type="submit">Register</button>
-			</form>
-			<p>We'll never share your information withot your permission</p>
-		</div>
-		<script src="index.pack.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBQ Splash Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <h1 class="hero__primary-text">
+        Learn how to make <strong>the best BBQ ribs</strong> in town
+      </h1>
+      <p class="hero__secondary-text">Join us for this live webinar</p>
+      <p class="hero__slogan">Mouthwateringly delicious</p>
+    </div>
+    <div class="cto">
+      <h2 class="cto__primary-text">Become a BBQ master!</h2>
+      <p class="cto__secondary-text">Register Today</p>
+      <p>
+        BBQ isn't just standing in front of your grill with on full blast and
+        hoping for the best. It's an art! One way to speed up the process is to
+        learn from the best. You can do just that by signing up for this free
+        webinar!
+      </p>
+      <form id="email-form" class="email-form" action="#" method="POST">
+        <input
+          name="name"
+          aria-label="Name"
+          type="text"
+          id="name"
+          placeholder="first name"
+          required
+        />
+        <input
+          name="email"
+          aria-label="email"
+          type="text"
+          id="email"
+          placeholder="email"
+          required
+        />
+        <button class="btn btn-primary" type="submit">Register</button>
+      </form>
+      <p class="email-form__note">
+        We'll never share your information without your permission
+      </p>
+    </div>
+    <script src="index.pack.js"></script>
+  </body>
 </html>
