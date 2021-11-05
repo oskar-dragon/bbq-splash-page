@@ -1,70 +1,86 @@
-* {
-	box-sizing: border-box;
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+
+  --fw-light: 300;
+  --fw-bold: 900;
+
+  --fs-h1: 3rem;
+  --fs-h2: 1.3125rem;
+
+  --clr-light: #fff;
+  --clr-dark: #404040;
+  --clr-primary: #f18119;
+
+  --border: 1px solid #404040;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-family: "Source Sans Pro", sans-serif;
-	font-size: 1rem;
-	color: #404040;
-	line-height: 1.4;
-	text-align: center;
+  margin: 0;
+  font-family: var(--ff-primary);
+  color: #404040;
+  line-height: 1.4;
+  text-align: center;
 }
 
 /*===========
 TYPOGRAPHY
 ============*/
 
-h1 {
-	font-size: 3rem;
-	color: #fff;
-	font-weight: 300;
-	margin: 0;
-	line-height: 1.2;
-}
-
-/* A way to select a selector that doesn't have a calss */
-h1 + p {
-	color: #f18119;
-	font-weight: 900;
-	font-size: 1.7rem;
-	text-transform: uppercase;
-	margin: 0;
-}
-
-h2 {
-	font-size: 1.3125rem;
-	font-weight: 900;
-	margin: 0;
-}
-
-h2 + p {
-	color: #f18119;
-	font-weight: 900;
-	text-transform: uppercase;
-	margin-top: 0;
-}
-
-.slogan {
-	font-size: 0.625rem;
-	color: #f18119;
-	font-weight: 900;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	order: -1;
-	margin: 0;
-	border-top: 5px solid #ffa51d;
-	padding-top: 2px;
-	border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
-}
-
-form + p {
-	font-size: 0.625rem;
-	letter-spacing: 1px;
-}
-
 strong {
-	font-weight: 900;
+  font-weight: var(--fw-bold);
+}
+
+.hero__primary-text {
+  font-size: var(--fs-h1);
+  color: var(--clr-light);
+  font-weight: var(--fw-light);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cto__primary-text {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  margin: 0;
+}
+
+.cto__secondary-text {
+  color: var(--clr-primary);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.email-form__note {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+.hero__secondary-text {
+  color: var(--clr-primary);
+  font-weight: var(--fw-bold);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero__slogan {
+  font-size: 0.625rem;
+  color: var(--clr-primary);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  order: -1;
+  margin: 0;
+  border-top: 5px solid #ffa51d;
+  padding-top: 2px;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
 }
 
 /* =================
@@ -72,74 +88,74 @@ strong {
    ================= */
 
 .hero {
-	background: #404040;
-	background-image: url(images/dark-ribs.jpg);
-	padding: 0 2em 2.5em;
-	display: flex;
-	flex-direction: column;
-	background-position: center;
-	background-size: cover;
-	justify-content: space-between;
-	min-height: 50vh;
+  background: var(--clr-dark);
+  background-image: url(images/dark-ribs.jpg);
+  padding: 0 2em 2.5em;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+  min-height: 50vh;
 }
 
 .cto {
-	padding: 2em 2.5em;
-	display: flex;
-	flex-direction: column;
+  padding: 2em 2.5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero > *,
 .cto > * {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
 }
 
 /* Form */
 .email-form {
-	width: 80%;
-	max-width: 300px;
+  width: 80%;
+  max-width: 300px;
 }
 
 input,
 .btn {
-	width: 100%;
-	border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 input {
-	font-family: inherit;
-	text-align: inherit;
-	font-size: inherit;
-	padding: 0.25em;
-	margin-bottom: 0.5em;
-	border: 1px solid #404040;
-	transform: scale(1);
-	transition: transform 250ms;
+  font-family: inherit;
+  text-align: inherit;
+  font-size: inherit;
+  padding: 0.25em;
+  margin-bottom: 0.5em;
+  border: var(--border);
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
 }
 
 input:hover {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn-primary {
-	display: inline-block;
-	background-image: linear-gradient(to left, #ff713b, #ffa51d);
-	text-transform: uppercase;
-	font-size: 0.7rem;
-	color: #fff;
-	letter-spacing: 1px;
-	padding: 1em;
-	border: none;
-	cursor: pointer;
-	transform: scale(1);
-	transition: transform 250ms;
+  display: inline-block;
+  background-image: linear-gradient(to left, #ff713b, #ffa51d);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--clr-light);
+  letter-spacing: 1px;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* =================
@@ -147,33 +163,32 @@ input:hover {
    ================= */
 
 @media (min-width: 800px) {
-	body {
-		display: flex;
-		flex-direction: row;
-		font-size: 1.2rem;
-	}
+  body {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+  }
 
-	h1 {
-		font-size: 4rem;
-	}
+  h1 {
+    font-size: 4rem;
+  }
 
-	h1 + p,
-	h2 {
-		font-size: 2rem;
-	}
+  h1 + p,
+  h2 {
+    font-size: 2rem;
+  }
 
-	form + p {
-		font-size: 0.625rem;
-	}
+  form + p {
+    font-size: 0.625rem;
+  }
 
-	.hero,
-	.cto {
-		width: 50%;
-		min-height: 100vh;
-	}
+  .hero,
+  .cto {
+    width: 50%;
+    min-height: 100vh;
+  }
 
-	
-	.cto {
-		justify-content: center;
-	}
+  .cto {
+    justify-content: center;
+  }
 }
